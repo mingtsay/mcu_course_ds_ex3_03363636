@@ -97,9 +97,9 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QRadioButton" name="radioLeftTop">
+           <widget class="QRadioButton" name="radioTopLeft">
             <property name="text">
-             <string>&amp;Left-Top</string>
+             <string>Top-&amp;Left</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -107,23 +107,23 @@
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="radioLeftBottom">
+           <widget class="QRadioButton" name="radioTopRight">
             <property name="text">
-             <string>L&amp;eft-Bottom</string>
+             <string>&amp;Top-Right</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="radioRightTop">
+           <widget class="QRadioButton" name="radioBottomLeft">
             <property name="text">
-             <string>&amp;Right-Top</string>
+             <string>&amp;Bottom-Left (Not Perfect)</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="radioRightBottom">
+           <widget class="QRadioButton" name="radioBottomRight">
             <property name="text">
-             <string>R&amp;ight-Bottom</string>
+             <string>Bottom-&amp;Right (Not Perfect)</string>
             </property>
            </widget>
           </item>
@@ -242,10 +242,10 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>radioLeftTop</tabstop>
-  <tabstop>radioLeftBottom</tabstop>
-  <tabstop>radioRightTop</tabstop>
-  <tabstop>radioRightBottom</tabstop>
+  <tabstop>radioTopLeft</tabstop>
+  <tabstop>radioTopRight</tabstop>
+  <tabstop>radioBottomLeft</tabstop>
+  <tabstop>radioBottomRight</tabstop>
   <tabstop>btnExecute</tabstop>
   <tabstop>tableView</tabstop>
  </tabstops>

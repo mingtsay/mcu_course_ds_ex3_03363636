@@ -6,13 +6,20 @@
 class Square : public QAbstractTableModel
 {
 public:
-    Square(const int size = 3);
+    enum Direction
+    {
+        TopLeft,
+        TopRight,
+        BottomLeft,
+        BottomRight,
+        Default = TopLeft
+    };
+    Q_ENUM(Direction)
+
+    Square(const int size = 3, const Direction direction = Direction::Default);
     ~Square();
-    int value(int x, int y) const;
     int size() const;
-    void setValue(int x, int y, const int value);
-    void resize(const int size);
-    void clear();
+    void resize(const int size, const Direction direction);
 
     // QAbstractItemModel interface
     int rowCount(const QModelIndex &parent) const;
@@ -23,6 +30,8 @@ private:
     int *_squareValues;
     int _size;
     void _realloc();
+    void _execute(const Direction direction);
+    int _positionConst(const int x, const int y) const;
     int _position(int &x, int &y) const;
 };
 
