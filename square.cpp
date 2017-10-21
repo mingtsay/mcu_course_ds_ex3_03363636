@@ -24,18 +24,19 @@ void Square::resize(const int size, const Square::Direction direction)
     emit layoutAboutToBeChanged();
 
     _realloc();
-    _execute(direction);
+    if (_size % 2) _execute(direction);
+    else _execute2();
 
     emit dataChanged(top, bottom);
     emit layoutChanged();
 }
 
-int Square::rowCount(const QModelIndex &parent) const
+int Square::rowCount(const QModelIndex & /* unused */) const
 {
     return _size + 1;
 }
 
-int Square::columnCount(const QModelIndex &parent) const
+int Square::columnCount(const QModelIndex & /* unused */) const
 {
     return _size + 1;
 }
@@ -114,6 +115,11 @@ void Square::_execute(const Direction direction)
         }
         _squareValues[_position(x, y)] = value;
     }
+}
+
+void Square::_execute2()
+{
+    ;
 }
 
 int Square::_positionConst(const int x, const int y) const
