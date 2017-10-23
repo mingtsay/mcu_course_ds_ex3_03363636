@@ -54,13 +54,13 @@
             </sizepolicy>
            </property>
            <property name="statusTip">
-            <string>Input the square size. It must be &gt;= 3</string>
+            <string>Input the square size. It must be an odd number not less than 3.</string>
            </property>
            <property name="text">
             <string>3</string>
            </property>
            <property name="placeholderText">
-            <string>must be &gt;= 3</string>
+            <string>odd num &gt;= 3</string>
            </property>
            <property name="clearButtonEnabled">
             <bool>true</bool>
@@ -90,10 +90,10 @@
           </size>
          </property>
          <property name="statusTip">
-          <string>Direction of the algorithm. Only affected to odd sizes.</string>
+          <string>Direction of the algorithm.</string>
          </property>
          <property name="title">
-          <string>Direction (Odd sizes only)</string>
+          <string>Direction</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>

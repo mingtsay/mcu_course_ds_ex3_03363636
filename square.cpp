@@ -24,8 +24,7 @@ void Square::resize(const int size, const Square::Direction direction)
     emit layoutAboutToBeChanged();
 
     _realloc();
-    if (_size % 2) _execute(direction);
-    else _execute2();
+    _execute(direction);
 
     emit dataChanged(top, bottom);
     emit layoutChanged();
@@ -115,11 +114,6 @@ void Square::_execute(const Direction direction)
         }
         _squareValues[_position(x, y)] = value;
     }
-}
-
-void Square::_execute2()
-{
-    ;
 }
 
 int Square::_positionConst(const int x, const int y) const

@@ -38,9 +38,9 @@ void MainWindow::on_btnExecute_clicked()
         return;
     }
 
-    if (size < 3)
+    if (size < 3 || size % 2 == 0)
     {
-        QMessageBox::warning(this, "Invalid Input", "The size of square should be >= 3, but the input is: " + ui->txtSize->text());
+        QMessageBox::warning(this, "Invalid Input", "The size of square should be an odd number not less than 3, but the input is: " + ui->txtSize->text());
         return;
     }
 

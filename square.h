@@ -31,7 +31,6 @@ private:
     int _size;
     void _realloc();
     void _execute(const Direction direction);
-    void _execute2();
     int _positionConst(const int x, const int y) const;
     int _position(int &x, int &y) const;
 };
